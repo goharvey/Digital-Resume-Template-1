@@ -1,0 +1,527 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #09090c;
+  font-family: Barlow, sans-serif;
+  color: #a8a8a8;
+  margin: 0;
+}
+
+/* Navigation - START */
+
+#navbar {
+  /* overflow: hidden; */
+  background-color: #1b1b1b;
+  font-family: Arial, Helvetica, sans-serif;
+  max-height: 50px;
+  max-width: 100%;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-img {
+  display: flex;
+  width: 250px;
+  background-image: url("https://via.placeholder.com/250x50");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#navbar a {
+  float: left;
+  font-size: 16px;
+  color: #a8a8a8;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Dropdown Navigation - START */
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding-right: 40px;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 28px;  
+  border: none;
+  outline: none;
+  color: #a8a8a8;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  display: flex;
+  padding: 11px;
+}
+
+#navbar a:hover, 
+.dropdown:hover .dropbtn,
+.dropbtn:focus {
+  background-color: #333;
+}
+
+.dropdown-content {
+  display: none;
+  right: 45px;
+  position: absolute;
+  background-color: #1b1b1b;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px #00000033;
+  z-index: 1;
+  top: 50px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #a8a8a8;
+  padding: 18px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.show {
+  display: block;
+}
+
+/* Dropdown Navigation - END */
+
+
+  /* Sticky Navigation - START */
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .sticky + .titleContainer {
+    padding-top: 55px;
+  }
+  /* Sticky Navigation - END */
+
+/* Navigation - END */
+
+/* Title Fade - START */
+
+.titleContainer {
+  height: 400px;
+  padding-bottom: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.item {
+  position: absolute;
+  align-content: center;
+  transform: translate(0%, 50%);
+}
+
+.item p {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.item h1 {
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 60px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Title Fade - END */
+
+/* Content - START */
+
+.content {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .content {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .content {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .content {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .content {
+    max-width: 1140px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 -15px;
+  justify-content: center;
+}
+
+  /* About Section - START */
+
+  .about-section {
+    padding: 7em 0;
+  }
+
+  .about-container {
+    height: 600px;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-col-1 {
+    flex: 1;
+    max-width: 35%;
+    background-image: url("https://via.placeholder.com/200x400");
+  }
+
+  .author-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .about-col-space {
+    flex: 2;
+    max-width: 15%;
+
+  }
+
+  .about-col-2 {
+    flex: 3;
+    max-width: 50%;
+    text-align: center;
+    align-self: center;
+    height: inherit;
+  }
+  
+  .titleText {
+    position: absolute;
+    top: 805px;
+    left: 550px;
+    right: 0;
+    bottom: 0;
+    font-size: 10em;
+    color:rgba(255, 255, 255, 0.08);
+    font-weight: 550;
+    z-index: 1;
+  }
+
+  .subtitleText {
+    z-index: 2;
+    margin-bottom: 4em;
+    letter-spacing: 2.5px;
+    font-weight: 100;
+  }
+
+  .p-container p {
+    height: 100%;
+    font-size: 1.5em;
+    line-height: 30px;
+    text-align: left;
+  }
+
+  .p-container h5 {
+    height: 100%;
+    font-size: 2em;
+    line-height: 30px;
+    text-align: left;
+    margin: 1em 0 .5em 0;
+    font-weight: 400;
+    color: white;
+  }
+
+
+  .list-unstyled {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    padding: 0;
+  }
+
+  .social-list {
+    margin-bottom: 4rem;
+    margin-top: 2.5rem;
+  }
+
+  .p-container a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .p-container a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  /* About Section - END */
+
+  /* Services Section - START */
+
+  .services-section {
+    padding-top: 15em;
+    padding-bottom: 15em;
+    height: 400px;
+  }
+
+  .titleText .servicesTitle {
+    position: absolute;
+    top: 1035px;
+    left: -250px;
+    right: 0;
+    bottom: 0;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.08);
+    font-weight: 600;
+    z-index: 1;
+  }
+
+  .services-desc {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    position: relative;
+    min-width: 200px;
+
+  }
+
+  .services-row-4 {
+    align-self: stretch;
+    display: flex;
+    margin: 0 15px;
+    padding: 0 30px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 1200px) {
+    .services-row-4 {
+      width: 130px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .services-row-4 {
+      width: 250px;
+    }
+  }
+
+  .services-content {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .services-img {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .services-img a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .media-body {
+    flex: 1;
+    text-align: center;
+
+  }
+
+  /* Services Section - END */
+
+  /* Portfolio Section - START */
+
+  .portfolio-section {
+    padding: 240px 0;
+  }
+
+  .titleFlex {
+    display: flex;
+    justify-content: center;
+  }
+
+  .portfolioTitle {
+    font-size: 10em;
+    color: rgba(255, 255, 255, 0.08);
+    font-weight: 600;
+    position: absolute;
+    top: 2710px;
+  }
+
+  .portfolioSubtitle {
+    display: flex;
+    letter-spacing: 2.5px;
+    font-weight: 100;
+  }
+
+  .portfolio-container {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-row {
+    display: flex;
+    margin: 0 -15px;
+    justify-content: center;
+    flex-flow: row;
+    height: 500px;
+    padding: 100px;
+  }
+
+  .portfolio-col-1 {
+    flex: 1;
+    max-width: 30%;
+    background-image: url("https://via.placeholder.com/200x400");
+  }
+
+  .portfolio-img-1 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .portfolio-col-space {
+    flex: 2;
+    max-width: 10%;
+  }
+
+  .portfolio-col-2 {
+    flex: 3;
+    max-width: 60%;
+    align-self: center;
+  }
+
+  .portfolio-col-2 h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #8c8c8c;
+  }
+
+  .portfolio-col-2 h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .portfolio-col-2 p {
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 400;
+  }
+
+  .portfolio-col-2 a {
+    font-size: 20px;
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .portfolio-col-2 a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  /* Portfolio Section - END */
+
+  /* Contact Section - START */
+
+  .contact-title {
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    padding: 0;
+  }
+
+  .contact-list a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .contact-list a:hover {
+    color: white;
+  }
+
+  .contact-copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-copyright a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .contact-copyright a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  /* Contact Section - END */
+
+/* Content - END */
+
+
+/* Media Queries - START */
+
+/* Media Queries - END */
+
